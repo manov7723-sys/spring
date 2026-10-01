@@ -1,0 +1,33 @@
+# VCS
+.git
+.gitignore
+.gitattributes
+
+# Secrets / local env
+.env*
+
+# Build output (rebuilt inside the image)
+target
+dist
+build
+*.class
+
+# Node (defensive — not used by this service)
+node_modules
+
+# Python (defensive — not used by this service)
+__pycache__
+*.pyc
+.venv
+
+# Local tooling / platform configs not needed in the image
+nixpacks.toml
+Procfile
+system.properties
+Dockerfile
+.dockerignore
+
+# IDE
+.idea
+.vscode
+*.iml
