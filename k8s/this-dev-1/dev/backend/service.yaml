@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: spring-backend
+  namespace: this-dev-1
+  labels:
+    app.kubernetes.io/name: spring-backend
+    app.kubernetes.io/managed-by: deepagent
+spec:
+  type: ClusterIP
+  selector:
+    app.kubernetes.io/name: spring-backend
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8080
